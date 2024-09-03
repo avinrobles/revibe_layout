@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodMusic Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#mood-history">Mood History</a></li>
+            <li><a href="#stress-relaxation">Stress & Relaxation</a></li>
+            <li><a href="#sleep-improvement">Sleep Improvement</a></li>
+            <li><a href="#environmental-adaptation">Environmental Adaptation</a></li>
+            <li><a href="#account-policies">Account Policies</a></li>
+            <li><a href="#evaluation-form">Evaluation Form</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>MoodMusic</h1>
+        
+        <div class="recognition-section">
+            <div class="recognition-box">
+                <h2>Facial Recognition</h2>
+                <div id="picBox" class="input-box">
+                    <input type="file" accept="image/*" id="imageUpload">
+                    <label for="imageUpload">Upload Image</label>
+                </div>
+            </div>
+            
+            <div class="recognition-box">
+                <h2>Text Recognition</h2>
+                <div class="input-box">
+                    <textarea id="textInput" placeholder="Enter your text here..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <button id="analyzeEmotionBtn" class="btn-analyze">Analyze Emotion</button>
+
+        <div id="emotionResult" class="emotion-result">
+            <h3>Detected Emotion: <span id="detectedEmotion"></span></h3>
+        </div>
+
+        <!-- Other feature sections remain the same -->
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
+

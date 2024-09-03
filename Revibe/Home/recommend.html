@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodMusic Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#mood-history">Mood History</a></li>
+            <li><a href="#stress-relaxation">Stress & Relaxation</a></li>
+            <li><a href="#sleep-improvement">Sleep Improvement</a></li>
+            <li><a href="#environmental-adaptation">Environmental Adaptation</a></li>
+            <li><a href="#account-policies">Account Policies</a></li>
+            <li><a href="#evaluation-form">Evaluation Form</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Your Mood-Based Playlist</h1>
+        <div id="emotionResult" class="emotion-result">
+            <h3>Based on your <span id="detectedEmotion"></span> mood</h3>
+        </div>
+        <div id="songRecommendations" class="song-recommendations">
+            <ul id="songList"></ul>
+        </div>
+        <button onclick="window.location.href='home.html'" class="btn-analyze">Back to Home</button>
+    </div>
+    <script src="recommendations.js"></script>
+</body>
+</html>
