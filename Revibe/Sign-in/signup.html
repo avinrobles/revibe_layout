@@ -7,23 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="svg-container">
+        <img src="C:/Users/avinn/Revibe/Sign-in/REVIBE.svg">
+    </div>
     <div class="container">
-        <form id="signupForm" class="form">
+        <form id="signupForm" class="form" action="signup_process.php" method="POST">
             <h2>Join the Community</h2>
+            <?php if ($error_message): ?>
+                <p class="error"><?php echo $error_message; ?></p>
+            <?php endif; ?>
+            <?php if ($success_message): ?>
+                <p class="success"><?php echo $success_message; ?></p>
+            <?php endif; ?>
             <div class="form-control">
-                <input type="text" id="newUsername" placeholder=" " required>
+                <input type="text" id="newUsername" name="newUsername" placeholder=" " required>
                 <label for="newUsername">Username</label>
             </div>
             <div class="form-control">
-                <input type="email" id="email" placeholder=" " required>
+                <input type="email" id="email" name="email" placeholder=" " required>
                 <label for="email">Email</label>
             </div>
             <div class="form-control">
-                <input type="password" id="newPassword" placeholder=" " required>
+                <input type="password" id="newPassword" name="newPassword" placeholder=" " required>
                 <label for="newPassword">Password</label>
             </div>
             <div class="form-control">
-                <input type="password" id="confirmPassword" placeholder=" " required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder=" " required>
                 <label for="confirmPassword">Confirm Password</label>
             </div>
             <button type="submit" class="btn-signup">Sign Up</button>
