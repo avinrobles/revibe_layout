@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | ReVibefffd</title>
+    <title>Login | ReVibe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="svg-container">
+        <img src="C:/Users/avinn/Revibe/Sign-in/REVIBE.svg">
+    </div>
     <div class="container">
-        <form id="loginForm" class="form">
+        <form id="loginForm" class="form" action="login_process.php" method="POST">
             <h2>Welcome Back</h2>
+            <?php if ($error_message): ?>
+                <p class="error"><?php echo $error_message; ?></p>
+            <?php endif; ?>
             <div class="form-control">
-                <input type="text" id="username" placeholder=" " required>
-                <label for="username">Email or Username</label>
+                <input type="text" id="username" name="username" placeholder=" " required>
+                <label for="username">Username</label>
             </div>
             <div class="form-control">
-                <input type="password" id="password" placeholder=" " required>
+                <input type="password" id="password" name="password" placeholder=" " required>
                 <label for="password">Password</label>
             </div>
             <button type="submit" class="btn-login">Login</button>
-            <button type="button" id="spotifyBtn" class="spotify-btn">Sign in with Spotify</button>
         </form>
         <p>Don't have an account? <a href="signup.html">Sign up</a></p>
     </div>
